@@ -3,11 +3,6 @@ import { createBasketballCourt } from "./basketballCourt.js";
 import { createBasketballHoops } from "./basketballHoops.js";
 import { OrbitControls } from "./OrbitControls.js";
 
-const COURT_LENGTH = 28;
-const COURT_WIDTH = 15;
-const COURT_HEIGHT = 0.2;
-const RIM_HEIGHT_ABOVE_GROUND = COURT_HEIGHT / 2 + 3.05;
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -57,11 +52,31 @@ instructionsElement.style.color = "white";
 instructionsElement.style.fontSize = "16px";
 instructionsElement.style.fontFamily = "Arial, sans-serif";
 instructionsElement.style.textAlign = "left";
+instructionsElement.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+instructionsElement.style.borderRadius = "5px";
+instructionsElement.style.padding = "15px";
 instructionsElement.innerHTML = `
   <h3>Controls:</h3>
   <p>O - Toggle orbit camera</p>
 `;
 document.body.appendChild(instructionsElement);
+
+// Score display
+const scoreElement = document.createElement("div");
+scoreElement.style.position = "absolute";
+scoreElement.style.bottom = "20px";
+scoreElement.style.right = "20px";
+scoreElement.style.color = "white";
+scoreElement.style.fontSize = "16px";
+scoreElement.style.fontFamily = "Arial, sans-serif";
+scoreElement.style.textAlign = "left";
+scoreElement.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+scoreElement.style.borderRadius = "5px";
+scoreElement.style.padding = "15px";
+scoreElement.innerHTML = `
+  <h3>Score: 0</h3>
+`;
+document.body.appendChild(scoreElement);
 
 // Handle key events
 function handleKeyDown(e) {

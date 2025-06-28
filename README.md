@@ -12,9 +12,16 @@
 
 ## Group Members
 **MANDATORY: Add the full names of all group members here:**
-- [Member 1 Full Name]
-- [Member 2 Full Name]
+- Gal Rabinovitz - 21188284
+- Aviad Kariv - 319001996
 
 ## Technical Details
 - Run the server with: `node index.js`
 - Access at http://localhost:8000 in your web browser
+
+## Screenshots
+![Front](./screenshots/FRONT.jpg)
+![Ball](./screenshots/BALL.jpg)
+![Hoop](./screenshots/HOOP.jpg)
+![Top](./screenshots/TOP.jpg)
+
