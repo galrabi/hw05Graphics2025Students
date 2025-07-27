@@ -19,6 +19,14 @@
 - Run the server with: `node index.js`
 - Access at http://localhost:8000 in your web browser
 
+## Bonus Features Implemented
+- **Multiple Hoops:** Allow shooting at both hoops with automatic targeting
+- **Swish Detection:** Bonus points for shots that don't touch the rim
+- **Combo System:** Consecutive shots award bonus points
+
+## Short Video
+[Watch the short gameplay video here](https://youtu.be/rjyyMlaae7k)
+
 ## Screenshots
 ![Front](./screenshots/FRONT.jpg)
 ![Ball](./screenshots/BALL.jpg)
