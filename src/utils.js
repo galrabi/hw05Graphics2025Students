@@ -18,13 +18,16 @@ export const translateBy = (object, x, z) => {
   object.position.z += z;
 };
 
-export const addTwoDuplicates = (scene, object, x, z = 0) => {
+export const addTwoDuplicates = (scene, object, x, z = 0, rotate = true) => {
   const object1 = object.clone();
   translateBy(object1, x, z);
   const object2 = object1.clone();
   object2.position.x = -object1.position.x;
-  rotateBy(object2, 180);
+  if (rotate) {
+    rotateBy(object2, 180);
+  }
   scene.add(object1, object2);
+  return [object1, object2];
 };
 
 export const addFourDuplicates = (scene, object, x, z) => {

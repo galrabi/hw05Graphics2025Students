@@ -42,6 +42,11 @@ This exercise focuses on implementing the static infrastructure of a basketball 
 ## IMPORTANT NOTE
 **Physics-based movement, interactive controls (arrow keys, spacebar), shooting mechanics, and scoring systems will be implemented in the next exercise (HW06). Do NOT implement these features in HW05.**
 
+## Bonus Features Implemented
+- **Multiple Hoops:** Allow shooting at both hoops with automatic targeting
+- **Swish Detection:** Bonus points for shots that don't touch the rim
+- **Combo System:** Consecutive shots award bonus points
+
 ## Getting Started
 - The starter code already includes:
   - Basic THREE.js setup with a scene, camera, and renderer

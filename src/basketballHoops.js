@@ -13,7 +13,7 @@ const BACKBOARD_HEIGHT_ABOVE_GROUND = RIM_HEIGHT_ABOVE_GROUND - RIM_Y_OFFSET;
 const SHOOTING_SQUARE_WIDTH = 0.59;
 const SHOOTING_SQUARE_HEIGHT = 0.45;
 const SHOOTING_SQUARE_LINE_WIDTH = 0.05;
-const RIM_RADIUS = 0.45 / 2;
+const RIM_RADIUS = 0.6 / 2;
 const RIM_TUBE_RADIUS = 0.02 / 2;
 const ARM_WIDTH = 0.3;
 const ARM_HEIGHT =
@@ -307,11 +307,19 @@ const createBasketballHoop = () => {
   arm.position.set(BACKBOARD_THICKNESS + ARM_WIDTH / 2, ARM_HEIGHT / 2, 0);
   const net = createNet(rim);
   net.position.copy(rim.position);
-  const group = new THREE.Group();
-  group.add(backboard, rim, arm, net);
-  return group;
+  return { backboard, rim, arm, net };
 };
 
 export const createBasketballHoops = (scene) => {
-  addTwoDuplicates(scene, createBasketballHoop(), COURT_LENGTH / 2);
+  const { backboard, rim, arm, net } = createBasketballHoop();
+  const backboards = addTwoDuplicates(scene, backboard, COURT_LENGTH / 2);
+  const rims = addTwoDuplicates(scene, rim, COURT_LENGTH / 2, 0, false);
+  const arms = addTwoDuplicates(scene, arm, COURT_LENGTH / 2);
+  const nets = addTwoDuplicates(scene, net, COURT_LENGTH / 2);
+  return {
+    backboards,
+    rims,
+    arms,
+    nets,
+  };
 };
