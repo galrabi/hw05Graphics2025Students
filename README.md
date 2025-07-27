@@ -19,6 +19,9 @@
 - Run the server with: `node index.js`
 - Access at http://localhost:8000 in your web browser
 
+## Implemented Controls
+- The game implements arrow keys for moving the basketball around the court, W/S keys for adjusting shot power (0-100%), and spacebar for shooting the ball toward the nearest hoop with automatic targeting. Additional controls include R for resetting the ball position and clearing combos, and O for toggling orbit camera mode to change viewing perspectives.
+
 ## Description of physics system implementation
 - Realistic Projectile Motion: Ball follows gravity-based trajectory with initial velocity calculated from shot power and direction to the nearest hoop
 
