@@ -19,6 +19,15 @@
 - Run the server with: `node index.js`
 - Access at http://localhost:8000 in your web browser
 
+## Description of physics system implementation
+- Realistic Projectile Motion: Ball follows gravity-based trajectory with initial velocity calculated from shot power and direction to the nearest hoop
+
+- Advanced Collision Detection: Uses Three.js bounding boxes and sphere intersections for backboards/arms, plus specialized torus collision for rim interactions with bounce physics
+
+- Surface-Specific Bouncing: Different bounciness coefficients (rim: 0.8, court: 0.7) with spin effects on rim bounces based on approach angle
+
+- Smart Scoring System: Detects swish shots (no rim contact) vs regular shots, implements combo multipliers for consecutive makes, and automatically resets on missed shots or out-of-bounds
+
 ## Bonus Features Implemented
 - **Multiple Hoops:** Allow shooting at both hoops with automatic targeting
 - **Swish Detection:** Bonus points for shots that don't touch the rim
